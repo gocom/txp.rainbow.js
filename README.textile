@@ -1,0 +1,10 @@
+h1. Textpattern Markup for Rainbow
+
+p. txp.rainbow.js brings "Textpattern CMS":http://textpattern.com/ Tag Syntax support to "Rainbow,":":https://github.com/ccampbell/rainbow a syntax highlighting library written in JavaScript.
+
+p. Considering Rainbow's flexible and powerful nature, this the TXP language pattern can also be used to extend HTML or other language pattern.
+
+h2. Notes
+
+* "php":http://textpattern.net/wiki/index.php?title=php blocks are treated as raw PHP code.
+* "hide":http://textpattern.net/wiki/index.php?title=hide are treated as comments.
