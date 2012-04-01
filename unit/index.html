@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Rinding Rainbows to Textpattern</title>
+	<link href="../_assets/rainbow/themes/github.css" rel="stylesheet" />
+
+	<style type="text/css">
+	
+		* {
+			margin: 0;
+			padding: 0;
+		}
+	
+		body {
+			padding: 2em;
+			background: #e7f3fa;
+			font: 0.85em Helvetica;
+			color: #485c68;
+		}
+		
+		a {
+			color: #2386b4;
+			text-decoration: none;
+		}
+		
+		h1 {
+			font-size: 2em;
+			text-transform: uppercase;
+			text-shadow: 0 1px 0 rgba(255,255,255,0.7);
+		}
+		
+		h1, p, pre {
+			margin: 0 0 20px 0;
+			line-height: 1.65em;
+		}
+		
+		pre {
+			box-shadow: 0 -1px 0 rgba(0,0,0,0.1), 0 0 1px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.2), inset 0 0 1px 0 rgba(255,255,255,0.1), inset 15px 0 0 #eee, inset 16px 0 0 rgba(0,0,0,0.1), 0 3px 5px rgba(0,0,0,0.3);
+			border: 0;
+			padding: 1em 25px;
+			line-height: 1.65em;
+		}
+
+	</style>
+</head>
+<body>
+
+	<h1>Textpattern Markup for Rainbow.js</h1>
+	
+	<p>Rainbow.txp.js brings <a href="http://textpattern.com">Textpattern</a> Tag Syntax support to <a href="https://github.com/ccampbell/rainbow">Rainbow</a>, a syntax highlighting library written in JavaScript.</p>
+	
+<pre><code data-language="txp"><!--
+<txp:hide>
+	Exports section's first article's title as a variable
+	<txp:txp_die msg="I sit silently." />
+</txp:hide>
+
+<txp:article_custom limit="1" section='<txp:section />'>
+	<txp:variable name="first_title"><txp:title no_widow="0" /></txp:variable>
+</txp:article_custom>
+
+<txp:hide>
+	See if the section even has an article
+</txp:hide>
+
+<txp:if_variable name="first_title">
+	<p>Sorry <strong>first_title</strong> is not defined.</p>
+</txp:if_variable>
+
+<txp:hide>
+	Tag nesting
+</txp:hide>
+
+<txp:if_variable name="first_title" value='<txp:title no_widow="0" />'>
+	<p class="notice">Current article page has same title.</p>
+<txp:else />
+	<p class="notice"><txp:title /> differs from <txp:variable name="first_title" /></p>
+</txp:if_variable>
+
+<txp:hide>
+	Multi-line tags
+</txp:hide>
+
+<txp:css
+	name="default"
+	media="screen"
+	/>
+
+<txp:hide>
+	Multi-line attributes
+</txp:hide>
+
+<txp:rah_replace from="breaks
+shifts" to="">
+	Removes line breaks and shifts.
+</txp:rah_replace>
+
+
+--></code></pre>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	
+	<script>
+		<!--
+		(function() {
+			var c = $('code').html();
+			$('code').text(jQuery.trim(c.substr(4, c.length-7)));
+		})();
+		//-->
+	</script>
+	
+	<script src="../_assets/rainbow/js/rainbow.min.js"></script>
+	<script src="../_assets/rainbow/js/language/generic.js"></script>
+	<script src="../_assets/rainbow/js/language/html.js"></script>
+	<script src="../txp.js"></script>
+
+</body>
+</html>
