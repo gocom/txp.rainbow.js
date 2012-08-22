@@ -46,5 +46,5 @@ Rainbow.extend('txp', [
 			2: 'string.value',
 		},
 		'pattern': /(=)("(?:[^"]|"{2,})*"|'(?:[^']|'{2,})*')/g
-	},
+	}
 ], true);
