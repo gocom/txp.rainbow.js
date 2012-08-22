@@ -23,7 +23,7 @@ Rainbow.extend('txp', [
 			1: 'support.tag.open',
 			2: 'support.tag.close'
 		},
-		'pattern': /(&lt;txp:)|(\/&gt;)/gm
+		'pattern': /(&lt;txp:)|(\/?&gt;)/gm
 	},
 	{
 		'name': 'support.tag',
