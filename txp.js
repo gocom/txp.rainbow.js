@@ -4,7 +4,7 @@
  * @author Jukka Svahn
  */
 
-Rainbow.extend('txp', [
+Rainbow.extend('html', [
 	{
 		'name': 'php.txp',
 		'matches': {
