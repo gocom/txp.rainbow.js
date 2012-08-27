@@ -43,7 +43,7 @@ Rainbow.extend('html', [
 	{
 		'matches': {
 			1: 'support.operator',
-			2: 'string.value',
+			2: 'string.value'
 		},
 		'pattern': /(=)("(?:[^"]|"{2,})*"|'(?:[^']|'{2,})*')/g
 	}
